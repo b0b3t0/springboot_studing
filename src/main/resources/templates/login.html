@@ -6,7 +6,7 @@
 <body>
 <th:block th:replace="fragments/navbar"></th:block>
 <main class="mt-5">
-    <h1 class="text-center text-white">Login</h1>
+    <h1 class="text-center text-dark">Login</h1>
     <hr />
     <form class="form w-50 mx-auto" th:action="@{login}" th:method="POST">
         <div class="username-and-password-holder d-flex justify-content-between">
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="button-holder d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Login</button>
         </div>
     </form>
 </main>
