@@ -11,5 +11,8 @@ public class UserController extends BaseController{
         return this.view("login");
     }
 
-
+    @GetMapping("/register")
+    public ModelAndView register() {
+        return this.view("register");
+    }
 }
