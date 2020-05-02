@@ -33,7 +33,13 @@ public class UserController extends BaseController{
     }
 
     @GetMapping("/register")
-    public ModelAndView register() {
+    public ModelAndView register(RedirectAttributes redirectAttributes, ModelAndView model) {
+        if(redirectAttributes.asMap().size() == 0) {
+            model.addObject("model", new RegisterUserBindingModel());
+        } else {
+            redirectAttributes.mergeAttributes(model.getModel());
+        }
+        
         return this.view("register");
     }
 
