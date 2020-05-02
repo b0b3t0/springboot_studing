@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:h="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <th:block th:replace="fragments/head"></th:block>
 </head>
 <body>
-$END$
+<th:block th:replace="fragments/navbar"></th:block>
+<main class="mt-5">
+    <h1 class="text-center text-white">Login</h1>
+    <hr />
+    <form class="form w-50 mx-auto" th:action="@{login}" th:method="POST">
+        <div class="username-and-password-holder d-flex justify-content-between">
+            <div class="form-group w-40">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username">
+            </div>
+            <div class="form-group w-40">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+        </div>
+        <div class="button-holder d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</main>
+<th:block th:replace="fragments/footer"></th:block>
 </body>
 </html>
