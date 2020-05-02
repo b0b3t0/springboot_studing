@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="fragments/head"></th:block>
+</head>
+<body>
+    <h1 th:text="${testing}"></h1>
+
+<th:block th:object="${session.user}">
+    <h2 th:text="|Username: *{username}|"></h2>
+    <h2 th:text="|Email: *{email}|"></h2>
+    <h2 th:text="|Age: *{age}|"></h2>
+</th:block>
+
+</body>
+</html>

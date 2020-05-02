@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:h="http://www.w3.org/1999/xhtml">
+<head>
+    <th:block th:replace="fragments/head"></th:block>
+</head>
+<body>
+    <form th:action="@{/login}" th:method="POST">
+        <label for="username">Username: </label>
+            <input type="text" name="username" id="username" th:value="${username}"/>
+        <label for="email">Email: </label>
+            <input type="text" name="email" id="email" th:value="${email}"/>
+        <label for="age">Age: </label>
+        <input type="number" name="age" id="age" th:value="${age}"/>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
